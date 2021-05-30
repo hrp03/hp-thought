@@ -1,7 +1,15 @@
-
 <div id="container">
-    
-    <div id="title">Code</div>
+
+    <div id="description">
+        
+        <div id="title">Code</div>
+        <div id="text">
+            Write a code in Javascript and
+            download the shareable
+            image in PNG format.
+        </div>
+
+    </div>
 
     <div id="codeContainer">
 
@@ -9,10 +17,12 @@
             <ngx-codemirror [(ngModel)]="code" [options]="options"></ngx-codemirror>
         </div>
 
+        <div id="btnContainer">
+            <button id="btnDownload" (click)="download()">Download</button>
+        </div>
+
     </div>
 
-    <div id="btnContainer">
-        <button id="btnDownload" (click)="download()">Download</button>
-    </div>
+
 
 </div>

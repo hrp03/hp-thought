@@ -1,23 +1,41 @@
-#title {
-    font-size: 36px;
-    text-align: center;
-}
 
 #container {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+    padding: 0 16px;
+}
+
+#description {
+    flex: 1;
+    width: 95vw;
+
+    font-family: Amaranth-Regular;
+   
+    #title {
+        font-size: 64px;
+    }
+
+    #text{
+        font-size: 28px;
+        text-align: justify;
+    }
+}
+
+#codeContainer {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 14px;
     height: 100vh;
-    div {
-        flex-grow: 1;
-    }
+    flex: 1;
 }
 
 #codeArea {
-    height: 80vw;
-    width: 80vw;
+    height: 95vw;
+    width: 95vw;
     max-width: 600px;
     max-height: 600px;
     font-size: 24px;
@@ -72,9 +90,11 @@
 @media (max-width: 800px) {
     #container {
         flex-direction: column;
+        padding: 0px;
+        padding-bottom: 16px;
     }
 
-    #title{
+    #title {
         padding-top: 36px;
     }
 }

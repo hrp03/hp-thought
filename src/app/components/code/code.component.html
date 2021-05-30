@@ -1,0 +1,18 @@
+
+<div id="container">
+    
+    <div id="title">Code</div>
+
+    <div id="codeContainer">
+
+        <div id="codeArea">
+            <ngx-codemirror [(ngModel)]="code" [options]="options"></ngx-codemirror>
+        </div>
+
+    </div>
+
+    <div id="btnContainer">
+        <button id="btnDownload" (click)="download()">Download</button>
+    </div>
+
+</div>

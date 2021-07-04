@@ -36,7 +36,6 @@
             ],
             "scripts": [
               "src/lib/dom-to-image/dom-to-image.min.js",
-              "src/lib/ml5.min.js",
               "src/lib/ai-libraries/clmtrackr.js",
               "src/lib/p5-js/p5.min.js",
               "src/lib/p5-js/p5.sound.js"
@@ -48,8 +47,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",

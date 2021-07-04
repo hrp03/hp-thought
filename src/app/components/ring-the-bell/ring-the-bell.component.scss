@@ -1,0 +1,43 @@
+#container {
+    height: 100%;
+    width: 100%;
+    padding: 0 16px;
+    padding-top: 6rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    #title {
+        font-size: 64px;
+    }
+
+    #text {
+        font-size: 24px;
+        text-align: justify;
+    }
+}
+
+a {
+    color: #848484;
+}
+
+#canvas {
+    text-align: center;
+    overflow: hidden;
+    margin-top: 6rem;
+}
+
+@media (max-width: 800px) {
+    #container {
+        padding-top: 0;
+        #canvas {
+            margin-top: 16px;
+        }
+
+        #title {
+            font-size: 48px;
+        }
+    }
+
+    #title {
+        padding-top: 28px;
+    }
+}

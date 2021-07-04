@@ -35,7 +35,12 @@
               "src/assets/fonts/fonts.css"
             ],
             "scripts": [
-              "src/lib/dom-to-image/dom-to-image.min.js"
+              "src/lib/dom-to-image/dom-to-image.min.js",
+              "src/lib/ml5.min.js",
+              "src/lib/ai-libraries/clmtrackr.js",
+              "src/lib/p5-js/p5.min.js",
+              "src/lib/p5-js/p5.sound.js"
+              
             ]
           },
           "configurations": {

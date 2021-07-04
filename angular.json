@@ -39,7 +39,6 @@
               "src/lib/ai-libraries/clmtrackr.js",
               "src/lib/p5-js/p5.min.js",
               "src/lib/p5-js/p5.sound.js"
-              
             ]
           },
           "configurations": {

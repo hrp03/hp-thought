@@ -67,7 +67,7 @@ export class TestYourVoiceComponent implements OnInit {
     this.clmTracker.init();
     this.clmTracker.start(this.video.elt);
 
-    this.soundBell = this.p5Instance.loadSound('/assets/mp3/doorbell.mp3');
+    this.soundBell = this.p5Instance.loadSound('assets/mp3/doorbell.mp3');
 
   }
 

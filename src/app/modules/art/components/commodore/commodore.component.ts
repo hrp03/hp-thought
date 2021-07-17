@@ -28,7 +28,7 @@ export class CommodoreComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    location.reload();
+    // location.reload();
   }
 
   constructor() { }

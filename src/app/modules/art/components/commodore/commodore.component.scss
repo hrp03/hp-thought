@@ -113,6 +113,22 @@ canvas {
         cursor: pointer;
         background-color: rgb(255, 255, 255);
     }
+
+    &::-ms-thumb{
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+    }
+
+    &::-moz-range-thumb{
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+    }
 }
 
 

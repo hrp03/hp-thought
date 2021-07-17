@@ -1,14 +1,18 @@
 <div id="container">
 
     <div id="labelContainer">
-        <label id="label">Arts</label>
+        <div><label id="label">Arts</label></div>
+        <div id="description">
+            Here, we have some beautiful arts created by programming 
+            with the help of some Javascript libraries.
+        </div>
     </div>
 
     <div id="artContainer">
 
         <div *ngFor="let art of arts" class="art" (click)="openArt(art.url)">
-            <div>{{art.title}}</div>
-            <div>{{art.description}}</div>
+            <div class="title">{{art.title}}</div>
+            <div class="description">{{art.description}}</div>
         </div>
 
     </div>

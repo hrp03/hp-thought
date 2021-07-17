@@ -1,0 +1,16 @@
+<div id="container">
+
+    <div id="labelContainer">
+        <label id="label">Arts</label>
+    </div>
+
+    <div id="artContainer">
+
+        <div *ngFor="let art of arts" class="art" (click)="openArt(art.url)">
+            <div>{{art.title}}</div>
+            <div>{{art.description}}</div>
+        </div>
+
+    </div>
+
+</div>

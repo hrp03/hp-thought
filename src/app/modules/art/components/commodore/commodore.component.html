@@ -1,0 +1,28 @@
+<div id="container">
+
+    <div id="description">
+
+        <div id="title">Commodore</div>
+        <div id="text">
+            Universe has a beautiful pattern.
+            Find what you get!
+        </div>
+
+        <div id="sliderContainer">
+            <div><label for="slider">Size</label></div>
+            <input type="range" min="10" max="100" value="10" id="slider" [(ngModel)]="spacing" (change)="reset()">
+          </div>
+
+    </div>
+
+    <div id="codeContainer">
+
+        <div #canvas id="canvas"></div>
+
+        <div id="btnContainer">
+            <button id="btnDownload" (click)="download()">Download</button>
+        </div>
+
+    </div>
+
+</div>

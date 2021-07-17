@@ -1,0 +1,39 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 16px;
+
+    #labelContainer{ padding-top: 36px; }
+
+    #artContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        width: 100%;
+        margin-top: 36px;
+
+        .art {
+            width: 30%;
+        }
+    }
+}
+
+#label {
+    width: 100%;
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+    font-size: 18px;
+}
+
+@media (max-width: 800px) {
+    #artContainer {
+        .art {
+            width: 100% !important;
+        }
+    }
+}

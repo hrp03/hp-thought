@@ -16,6 +16,10 @@ const routes: Routes = [
     component: TestYourVoiceComponent
   },
   {
+    path: 'arts',
+    loadChildren: () => import('./modules/art/art.module').then(m => m.ArtModule)
+  },
+  {
     path: '',
     component: HomeComponent
   },

@@ -1,21 +1,27 @@
 <div id="container">
 
     <div id="description">
-        
+
         <div id="title">Code</div>
         <div id="text">
             Write a code in Javascript and
             download the shareable
             image in PNG format.
         </div>
+        <div id="sliderContainer">
+            <br />
+            Font Size<br />
+            <input class="slider" type="range" min="1" max="10" [(ngModel)]="fontSize" (change)="setFontSize($event)">
+        </div>
 
     </div>
 
     <div id="codeContainer">
 
-        <div id="codeArea">
+        <div id="codeArea" [style]="{'font-size': fontSize + 'vw'}">
             <ngx-codemirror [(ngModel)]="code" [options]="options"></ngx-codemirror>
         </div>
+
 
         <div id="btnContainer">
             <button id="btnDownload" (click)="download()">Download</button>

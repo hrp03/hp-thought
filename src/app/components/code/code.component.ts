@@ -8,16 +8,16 @@ declare var domtoimage: any;
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss']
+  styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent implements OnInit {
-
-  code: string = "";
+  code: string = '';
+  fontSize: number = 3;
 
   options: any = {
     lineNumbers: false,
     theme: 'material',
-    mode: 'javascript'
+    mode: 'javascript',
   };
 
   themes: any = [];
@@ -26,14 +26,16 @@ export class CodeComponent implements OnInit {
   selectedTheme: string = '';
   selectedLanguage: string = '';
 
-  constructor(private codeService: CodeService, private router: Router) {
-
-  }
+  constructor(private codeService: CodeService, private router: Router) {}
 
   ngOnInit() {
     this.code = this.codeService.text;
     this.themes = this.codeService.codeMirror.themes;
     this.languages = this.codeService.codeMirror.languages;
+  }
+
+  setFontSize(event: any) {
+    this.fontSize = event.target.value;
   }
 
   changeTheme(event: any) {
@@ -50,26 +52,22 @@ export class CodeComponent implements OnInit {
     this.options = {
       lineNumbers: false,
       theme: this.selectedTheme,
-      mode: this.selectedLanguage
+      mode: this.selectedLanguage,
     };
   }
 
   download() {
-    domtoimage.toSvg(document.getElementById('codeArea')).then((dataUrl: any) => {
+    domtoimage
+      .toSvg(document.getElementById('codeArea'))
+      .then((dataUrl: any) => {
+        let imageCreator = new ImageCreator();
 
-      let imageCreator = new ImageCreator();
-      
-      imageCreator.convertSvgToPng(dataUrl).then((png: any) => {
-
-        var link = document.createElement('a');
-        link.download = Date.now() + '.png';
-        link.href = png;
-        link.click();
-
+        imageCreator.convertSvgToPng(dataUrl).then((png: any) => {
+          var link = document.createElement('a');
+          link.download = Date.now() + '.png';
+          link.href = png;
+          link.click();
+        });
       });
-
-    });
   }
-
-
 }
